@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - JDRB Water Billing</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #1976D2; border-bottom: 2px solid #1976D2; padding-bottom: 10px; }
+        h2 { color: #1976D2; margin-top: 30px; }
+        .deletion-box { margin-top: 50px; padding: 25px; border: 2px solid #ef9a9a; border-radius: 12px; background-color: #fff5f5; }
+        .btn-delete { background-color: #d32f2f; color: white; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 10px; }
+        input, textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        footer { margin-top: 50px; font-size: 0.9em; color: #666; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>Privacy Policy</h1>
+    <p><strong>Effective Date:</strong> January 2025</p>
+
+    <p>JDRB Water Billing ("we," "our," or "the App") is committed to protecting your privacy. This policy explains how we handle data for the JDRB Water Billing mobile application.</p>
+
+    <h2>1. Information We Collect</h2>
+    <ul>
+        <li><strong>Personal Information:</strong> We collect client names, addresses, and contact numbers provided by the user to manage water billing records.</li>
+        <li><strong>Financial Records:</strong> We store billing history, meter readings, and payment records.</li>
+        <li><strong>Account Data:</strong> We use Firebase Authentication to manage user accounts via email.</li>
+    </ul>
+
+    <h2>2. Use of Permissions</h2>
+    <ul>
+        <li><strong>Bluetooth:</strong> Used solely to discover and connect to thermal receipt printers. No location data is collected.</li>
+        <li><strong>Biometrics:</strong> Used for the optional "App Lock" feature. We do not store or see your biometric data; it is managed by the Android system.</li>
+        <li><strong>Notifications:</strong> Used to provide alerts regarding data synchronization and backups.</li>
+    </ul>
+
+    <h2>3. Data Storage & Security</h2>
+    <p>Your data is stored locally on your device and synchronized to <strong>Google Firebase</strong> secure cloud servers. We implement SSL encryption for all data in transit.</p>
+
+    <h2>4. Third-Party Services</h2>
+    <p>We use Google Play Billing for premium subscriptions. We do not sell or share your personal data with any other third parties.</p>
+
+    <div id="account-deletion" class="deletion-box">
+        <h2 style="margin-top: 0; color: #c62828;">Account Deletion Request</h2>
+        <p>You have the right to request the permanent deletion of your account and all associated data (Clients, Bills, Payments).</p>
+        <p><strong>To delete your data:</strong></p>
+        <ol>
+            <li>Open the App -> Settings -> <strong>Delete Account</strong>.</li>
+            <li>Alternatively, fill out the form below to request manual deletion:</li>
+        </ol>
+
+        <form action="mailto:rexel50@gmail.com" method="post" enctype="text/plain">
+            <label for="email">Registered Email Address:</label>
+            <input type="email" id="email" name="Email" placeholder="user@example.com" required>
+            
+            <label for="reason" style="display:block; margin-top:15px;">Reason (Optional):</label>
+            <textarea id="reason" name="Reason" rows="3"></textarea>
+            
+            <input type="hidden" name="Subject" value="Account Deletion Request">
+            <button type="submit" class="btn-delete">Send Deletion Request</button>
+        </form>
+        <p><small>Note: Requests sent via email will be processed within 7 business days.</small></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 JDRB Water Billing | Developer Contact: rexel50@gmail.com</p>
+    </footer>
+
+</body>
+</html>
