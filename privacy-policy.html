@@ -9,8 +9,8 @@
         h1 { color: #1976D2; border-bottom: 2px solid #1976D2; padding-bottom: 10px; }
         h2 { color: #1976D2; margin-top: 30px; }
         .deletion-box { margin-top: 50px; padding: 25px; border: 2px solid #ef9a9a; border-radius: 12px; background-color: #fff5f5; }
-        .btn-delete { background-color: #d32f2f; color: white; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 10px; }
-        input, textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .btn-delete { background-color: #d32f2f; color: white; padding: 14px 28px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 20px; transition: background 0.3s; }
+        .btn-delete:hover { background-color: #b71c1c; }
         footer { margin-top: 50px; font-size: 0.9em; color: #666; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
     </style>
 </head>
@@ -19,48 +19,46 @@
     <h1>Privacy Policy</h1>
     <p><strong>Effective Date:</strong> January 2025</p>
 
-    <p>JDRB Water Billing ("we," "our," or "the App") is committed to protecting your privacy. This policy explains how we handle data for the JDRB Water Billing mobile application.</p>
+    <p>JDRB Water Billing ("we," "our," or "the App") is committed to protecting your privacy. This policy explains how we handle data for the JDRB Water Billing mobile application and its associated Customer Portal.</p>
 
     <h2>1. Information We Collect</h2>
     <ul>
-        <li><strong>Personal Information:</strong> We collect client names, addresses, and contact numbers provided by the user to manage water billing records.</li>
+        <li><strong>Personal Information:</strong> We collect client names, addresses, contact numbers, and unique <strong>Account Numbers</strong> to manage water billing records and portal access.</li>
         <li><strong>Financial Records:</strong> We store billing history, meter readings, and payment records.</li>
-        <li><strong>Account Data:</strong> We use Firebase Authentication to manage user accounts via email.</li>
+        <li><strong>Photos and Images:</strong> The App allows users to upload images for <strong>Payment Verification</strong> (proof of payment screenshots) and <strong>Service Reports</strong> (photos of water leaks or issues). These images are stored securely in our cloud database.</li>
+        <li><strong>Account Data:</strong> We use Firebase Authentication to manage administrator accounts via email.</li>
     </ul>
 
     <h2>2. Use of Permissions</h2>
     <ul>
-        <li><strong>Bluetooth:</strong> Used solely to discover and connect to thermal receipt printers. No location data is collected.</li>
-        <li><strong>Biometrics:</strong> Used for the optional "App Lock" feature. We do not store or see your biometric data; it is managed by the Android system.</li>
-        <li><strong>Notifications:</strong> Used to provide alerts regarding data synchronization and backups.</li>
+        <li><strong>Storage/Media:</strong> Used to allow you to select and upload payment screenshots or leak photos.</li>
+        <li><strong>Bluetooth:</strong> Used solely to discover and connect to thermal receipt printers.</li>
+        <li><strong>Biometrics:</strong> Used for the optional "App Lock" feature. We do not store biometric data.</li>
+        <li><strong>Notifications:</strong> Used for data synchronization and payment status alerts.</li>
     </ul>
 
     <h2>3. Data Storage & Security</h2>
-    <p>Your data is stored locally on your device and synchronized to <strong>Google Firebase</strong> secure cloud servers. We implement SSL encryption for all data in transit.</p>
+    <p>Your data is stored locally on your device and synchronized to <strong>Google Firebase</strong> secure cloud servers. This allows administrators to manage records and customers to view their bills via the portal. We implement SSL encryption for all data in transit.</p>
 
     <h2>4. Third-Party Services</h2>
-    <p>We use Google Play Billing for premium subscriptions. We do not sell or share your personal data with any other third parties.</p>
+    <p>We use <strong>Google Firebase</strong> for data hosting, authentication, and cloud synchronization. We do not sell or share your personal data with any other third parties.</p>
+
+    <h2>5. Customer Portal Access</h2>
+    <p>Customers can access their own billing records using a unique Account Number provided by their billing administrator. This access is restricted to the specific customer's data only.</p>
 
     <div id="account-deletion" class="deletion-box">
         <h2 style="margin-top: 0; color: #c62828;">Account Deletion Request</h2>
-        <p>You have the right to request the permanent deletion of your account and all associated data (Clients, Bills, Payments).</p>
-        <p><strong>To delete your data:</strong></p>
-        <ol>
-            <li>Open the App -> Settings -> <strong>Delete Account</strong>.</li>
-            <li>Alternatively, fill out the form below to request manual deletion:</li>
-        </ol>
+        <p>You have the right to request the permanent deletion of your account and all associated data (Clients, Bills, Payments, and Images).</p>
+        
+        <p><strong>Option 1: In-App Deletion</strong></p>
+        <p>Open the App -> Settings -> <strong>Delete Account</strong>. This will immediately and permanently remove your data from our cloud servers.</p>
+        
+        <p><strong>Option 2: Email Request</strong></p>
+        <p>If you can no longer access the app, you may click the button below to send a manual deletion request. Please include your registered email address in the message.</p>
 
-        <form action="mailto:rexel50@gmail.com" method="post" enctype="text/plain">
-            <label for="email">Registered Email Address:</label>
-            <input type="email" id="email" name="Email" placeholder="user@example.com" required>
-            
-            <label for="reason" style="display:block; margin-top:15px;">Reason (Optional):</label>
-            <textarea id="reason" name="Reason" rows="3"></textarea>
-            
-            <input type="hidden" name="Subject" value="Account Deletion Request">
-            <button type="submit" class="btn-delete">Send Deletion Request</button>
-        </form>
-        <p><small>Note: Requests sent via email will be processed within 7 business days.</small></p>
+        <a href="mailto:rexel50@gmail.com?subject=Account Deletion Request - JDRB Water Billing" class="btn-delete">Request Account Deletion</a>
+        
+        <p><small style="display:block; margin-top:15px;">Note: Requests sent via email will be processed within 7 business days.</small></p>
     </div>
 
     <footer>
